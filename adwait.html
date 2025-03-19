@@ -106,7 +106,7 @@
               <iframe
                 src="charts/adwait/line_chart_matrix.html"
                 width="1700"
-                height="1110"
+                height="1210"
                 frameborder="0"
               ></iframe>
             </div>
@@ -124,8 +124,9 @@
             </header>
             <p class="align-center">
               The visualizations above support the following tasks by employing
-              interactive heatmaps, faceted bar charts, and line charts that
-              dynamically adapt based on user selections.:
+              interactive heatmaps with linked detail brush charts, faceted bar
+              charts, and line charts that dynamically adapt based on user
+              selections:
             </p>
 
             <ul>
@@ -134,8 +135,8 @@
                 dominant countries in terms of the number of medals won.
               </li>
               <li>
-                <strong>Interact with Time:</strong> To visualize the domination
-                of countries in different events over time.
+                <strong>Explore Time Trends:</strong> To visualize the
+                domination of countries in different events over time.
               </li>
               <li>
                 <strong>Compare Seasons:</strong> To compare the performance of
@@ -150,6 +151,11 @@
               <li>
                 <strong>Identify Popular Sports:</strong> To identify the most
                 popular sports in both Summer and Winter seasons.
+              </li>
+              <li>
+                <strong>Analyze Individual Sports:</strong> To analyze
+                individual sports and identify the countries that have excelled
+                in them over time.
               </li>
             </ul>
           </div>
@@ -195,7 +201,9 @@
                 number of medals won by a country in each year, helping users
                 identify regions of high or low medal counts at a glance. The
                 position channel for years helps the users read the graph from
-                left to right with the years increasing from 1896 to 2016.
+                left to right with the years increasing from 1896 to 2016. The
+                saturation channel and position channel are magnitude-ordered
+                channels and adhere to the principle of effectiveness.
                 <br />
                 In the brush chart, the 2 colors (orange and blue) on the
                 opposite ends of the color hue channel help the users identify
@@ -220,10 +228,13 @@
                 for Summer or Winter in both the charts using radio buttons.
                 Users can also decide if they want to filter out countries based
                 on how many medals they have won (low, medium, high) using a
-                dropdown. For both the heatmap and brush chart, there is a
-                tooltip on hovering over a cell to show the number of medals won
-                by the country in the selected season for the corresponding
-                year.
+                dropdown. The heatmap has a brush selection built in so
+                rectangular regions can be selected and by moving this selection
+                box around with clicking and dragging, you can view updates in
+                the detailed brush chart. For both the heatmap and brush chart,
+                there is a tooltip on hovering over a cell to show the number of
+                medals won by the country in the selected season for the
+                corresponding year.
               </li>
               <li>
                 <strong>Critique:</strong> There is a lot of information being
@@ -290,8 +301,11 @@
               <li>
                 <strong>Channels:</strong> The horizontal position and order
                 channel denotes years starting from 1896 to 2016, while the
-                vertical position and order channel represents medal counts. The
-                color hue channel represents a country (NOC).
+                vertical position and order channel represents medal counts and
+                these are both numerical attributes represented by
+                magnitude-ordered channels. The color hue channel which is a
+                identity channel for categorical attributes represents a country
+                (NOC).
               </li>
               <li>
                 <strong>Characteristics of Channels:</strong> The years are
@@ -300,30 +314,40 @@
                 bottom in an increasing order enabling top to bottom reading.
                 With the categorical-identity color hue channel, users can
                 easily choose a country and follow its trend over multiple years
-                as country is a nominal attribute.
+                as country is a nominal attribute. These channels are ranked
+                highly in the list of magnitude and identity channels so we are
+                following the principles of effectiveness and expressiveness.
               </li>
               <li>
                 <strong>Interactivity:</strong> By default, the line chart shows
                 the medal counts won by 5 countries in all years in certain
-                sports. The sports shown are the top 12 most popular ones in a
-                season and they are column-faceted. You can select a season to
-                display the medal counts for Summer or Winter using radio
-                buttons. You can use the "Number of Countries" slider to choose
+                sports. You can use the "Number of Countries" slider to choose
                 the number of countries to display at any given time on all the
-                charts (default value is 5). You can also click on a line in the
-                chart to only show that country in all the line charts (other
-                country lines are dimmed) and this selection is preserved when
-                you switch between seasons. Clicking anywhere else in the chart
-                will remove the highlighted country selection. Lastly, there is
-                a tooltip on hovering over a line to show the number of medals
-                won by a country in the selected season for the corresponding
-                year for that sport.
+                charts (default value is 5). The sports shown are the top 12
+                most popular ones in a season and they are column-faceted. With
+                the "Select Sport" dropdown, you can either choose a specific
+                sport to display on the entire map or select "All Sports" for
+                the default view. You can select a season to display the medal
+                counts for Summer or Winter using radio buttons. You can also
+                click on a line in the chart to only show that country in all
+                the line charts (other country lines are dimmed) and this
+                selection is preserved when you switch between seasons. Clicking
+                anywhere else in the chart will remove the highlighted country
+                selection. The line charts have zoom and pan features enabled so
+                you can zoom in and out to view country lines in detail and move
+                around the chart to hide and show lines. Lastly, there is a
+                tooltip on hovering over a line to show the number of medals won
+                by a country in the selected season for the corresponding year
+                for that sport.
               </li>
               <li>
                 <strong>Critique:</strong> When the chart is showing all the
                 countries in a season, it is hard to compare the performance of
                 different countries in different sports because the lines cross
-                each other multiple times over the years. It can also be
+                each other multiple times over the years and there is a bit of
+                cluttering for low values of medal counts. Due to this clutter,
+                it can be difficult to click on an individual line to view its
+                details and there can be frequent misclicks. It can also be
                 difficult to get the exact medal count for a country without
                 hovering over its line as the vertical axis is only for the
                 charts on the left margin.
