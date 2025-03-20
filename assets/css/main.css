@@ -4491,6 +4491,8 @@ body.is-mobile .banner > article {
   display: flex;
   width: 100%;
   justify-content: center;
+  align-items: center;
+  padding: 2rem 0 2rem 0;
 }
 
 .reset-button {
