@@ -1929,6 +1929,7 @@ hr.major {
 
 .align-center {
   text-align: center;
+  padding: 1rem 0 1rem 0;
 }
 
 .align-right {
@@ -4492,7 +4493,7 @@ body.is-mobile .banner > article {
   width: 100%;
   justify-content: center;
   align-items: center;
-  padding: 2rem 0 2rem 0;
+  padding: 1rem 0 1rem 0;
 }
 
 .reset-button {
