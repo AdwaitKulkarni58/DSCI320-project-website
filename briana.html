@@ -53,19 +53,38 @@
               <h2>Athlete Demographics and Performance Trends</h2>
             </header>
             <p class="align-center">
-              Following are the research questions supported by the
-              visualizations:
+              The visualizations below explore the performance of athletes based
+              on their demographic information in the Summer and Winter Olympic
+              Games from 1896 to 2016. The data is visualized using heatmaps,
+              faceted bar charts, scatter plots, and area density charts to
+              analyze the performance of male and female athletes of varying
+              heights, weights, and ages in different events over time. The
+              visualizations are interactive and allow users to explore the data
+              by selecting specific countries, sports, and seasons. Following
+              are the research questions supported by the visualizations:
             </p>
 
             <ul>
               <li>
-                <strong>Question 1</strong>
+                <strong
+                  >How does the importance of height and weight for winning a
+                  medal differ between men's and women's categories across
+                  different disciplines/events?</strong
+                >
               </li>
               <li>
-                <strong>Question 2 </strong>
+                <strong
+                  >What is the top-performing age (age at which athletes are
+                  winning the most medals) for men and women in different
+                  sports?</strong
+                >
               </li>
               <li>
-                <strong>Question 3 </strong>
+                <strong
+                  >Are there countries in which women consistently win Olympic
+                  medals in one discipline while men do not, and vice versa in
+                  another sport?</strong
+                >
               </li>
             </ul>
             <div>
@@ -79,6 +98,43 @@
                   location.reload();
                 }
               </script>
+            </div>
+            <p class="align-center">
+              The first view allows users to view sports with different peak
+              heights and weight (height and weights at which athletes win the
+              most medals relative to the number of athletes participating) for
+              all sports in the scatterplot, colored by the type of medal won in
+              each sport. The distribution plots show a few specific sports that
+              might be interesting to look at in terms of height and weight.
+              When a type of medal is selected from the legend, the distribution
+              of this type is emphasised and only the points for that medal type
+              are shown in the scatter plot
+            </p>
+            <div class="iframe-container">
+              <iframe></iframe>
+            </div>
+            <p class="align-center">
+              The second view consists of a faceted histogram and a faceted line
+              plot over time, both faceted by sex. The histogram presents the
+              distribution and performance of male and female athletes of
+              varying ages per sport selected, while the line plot demonstrates
+              how the success of the age groups have changed over time
+            </p>
+            <div class="iframe-container">
+              <iframe></iframe>
+            </div>
+            <p class="align-center">
+              This third view is a heatmap that displays the difference in
+              performance by female and male athletes in the same sport over
+              time, given the user has selected a specific country and season
+              for which to view this data. It aims to help the user identify in
+              which countries and for those countries in which sports there is a
+              large, consistent discrepancy between the number of medals won by
+              the female versus male athletes.
+            </p>
+            <div class="iframe-container">
+              <iframe></iframe>
+            </div>
           </div>
         </div>
       </div>
@@ -91,20 +147,40 @@
             <header class="align-center">
               <h2>Tasks Supported</h2>
             </header>
-            <p>
-              The visualizations above support the following tasks by employing
-              ...
-            </p>
+            <p>The visualizations above support the following tasks:</p>
 
             <ul>
               <li>
-                <strong>Task 1</strong>
+                <strong
+                  >Compare between the performance of male and female athletes
+                  in different sports, and the distributions of various of their
+                  physical attributes such as height, weight and age.</strong
+                >
               </li>
               <li>
-                <strong>Task 2 </strong>
+                <strong
+                  >Identify potential correlations between athletes heights and
+                  weights and their performance.</strong
+                >
               </li>
               <li>
-                <strong>Task 3 </strong>
+                <strong
+                  >Explore gender differences over time for different
+                  countries.</strong
+                >
+              </li>
+              <li>
+                <strong
+                  >Compare the difference in success of female and male athletes
+                  between various sports for the same country.</strong
+                >
+              </li>
+              <li>
+                <strong
+                  >Identify sports in which there has been a consistent
+                  discrepancy between the success of the male and female teams
+                  for the same country.</strong
+                >
               </li>
             </ul>
           </div>
