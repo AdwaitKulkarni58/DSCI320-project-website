@@ -109,13 +109,16 @@
               over the years, while the detailed linked chart connected to it
               allows for an interactive country exploration. The faceted bar
               chart in the second view shows the distribution of medals won by
-              countries in a specific year for a specific season.
+              countries in a specific year for a specific season. All these
+              charts in both views are bidirectionally linked to each other and
+              allow users to explore the performance of countries in different
+              seasons over time.
             </p>
             <div class="iframe-container">
               <iframe
                 src="charts/adwait/heatmap_and_bar_chart.html"
                 width="1000"
-                height="1300"
+                height="1350"
                 frameborder="0"
               ></iframe>
             </div>
@@ -209,7 +212,10 @@
             <header class="align-center">
               <h2>Visualization Design Justification</h2>
             </header>
-            <h3>Heatmap and Detail Brush Chart (Bidirectional Link)</h3>
+            <h3>
+              Heatmap and Detail Brush Chart (Bidirectional Link to Each Other
+              and Faceted Bar Chart)
+            </h3>
             <ul>
               <li>
                 <strong>Mark:</strong> The mark type used is a point to
@@ -225,11 +231,9 @@
                 2016, while the vertical position channel represents a country
                 (NOC). The saturation channel represents the number of medals
                 won by the country in each year and this is a magnitude ordered
-                channel as the number of medals is a numerical attribute. The
-                color scheme used is sequential as the number of medals
-                increases from a minimum to a maximum. Each cell in the heatmap
-                has shared boundaries in terms of years and countries,
-                horizontally and vertically respectively.<br />
+                channel as the number of medals is a numerical attribute. Each
+                cell in the heatmap has shared boundaries in terms of years and
+                countries, horizontally and vertically respectively.<br />
                 For the brush chart, the horizontal position and order channels
                 represent the year and the vertical position and order channels
                 represent the number of medals won by a country. The color hue
@@ -241,10 +245,13 @@
                 the sequential color scheme is used to encode magnitude of the
                 number of medals won by a country in each year, helping users
                 identify regions of high or low medal counts at a glance. The
-                position channel for years helps the users read the graph from
-                left to right with the years increasing from 1896 to 2016. The
-                saturation channel and position channel are magnitude-ordered
-                channels and adhere to the principle of effectiveness.
+                color scheme is appropriate as the number of medals is a
+                numerical attribute and increases from a minimum to a maximum.
+                The position channel for years helps the users read the graph
+                from left to right with the years increasing from 1896 to 2016.
+                The saturation channel and position channel are
+                magnitude-ordered channels and adhere to the principle of
+                expressiveness.
                 <br />
                 In the brush chart, the 2 color hues (orange and blue) on the
                 opposite ends of the color hue channel help the users identify
@@ -253,50 +260,64 @@
                 enabling left to right reading and the number of medals are
                 ordered from top to bottom in an increasing order enabling top
                 to bottom reading.
+                <br />
+                These channels are ranked highly in the list of magnitude and
+                identity channels so we are following the principle of
+                effectiveness.
               </li>
               <br />
               <li>
                 <strong>Interactivity:</strong> The heatmap is bidirectionally
-                linked to the detailed brush chart view below it. Clicking on a
-                cell in the heatmap will highlight the corresponding country in
-                the heatmap and the corresponding country in the detailed brush
-                chart view. Similarly, clicking on a bar in the brush chart will
-                highlight the corresponding country in the heatmap. When you
-                select a cell in the heatmap or a bar in the brush chart,
-                everything else in both the charts will be unhighlighted, and
-                clicking anywhere other than the highlighted parts will remove
-                the highlight. This selection is preserved when you switch
-                between seasons. Users can select a season to display the trends
-                for Summer or Winter in both the charts using radio buttons.
-                Users can also decide if they want to filter out countries based
-                on how many medals they have won (low, medium, high) using a
-                dropdown. The heatmap has a brush selection built in so
-                rectangular regions can be selected and by moving this selection
-                box around with clicking and dragging, you can view updates in
-                the detailed brush chart. For both the heatmap and brush chart,
-                there is a tooltip on hovering over a cell to show the number of
-                medals won by the country in the selected season for the
-                corresponding year.
+                linked to the detailed brush chart in the same view and it is
+                also bidirectionally linked to the faceted bar chart in a
+                different view below it. Clicking on a cell in the heatmap will
+                highlight the corresponding country in the heatmap and the
+                corresponding country in the detailed brush chart view along
+                with the corresponding country in the faceted bar chart.
+                Similarly, clicking on a bar in the brush chart will highlight
+                the corresponding country in the heatmap and the faceted bar
+                chart. When you select a cell in the heatmap or a bar in the
+                brush chart, everything else in both the charts will be
+                unhighlighted, and clicking anywhere other than the highlighted
+                parts will remove the highlight. This selection is preserved
+                when you switch between seasons. Users can select a season to
+                display the trends for Summer or Winter in both the charts using
+                radio buttons. Users can also decide if they want to filter out
+                countries based on how many medals they have won (low, medium,
+                high) using a dropdown. The heatmap has a brush selection built
+                in so rectangular regions can be selected and by moving this
+                selection box around with clicking and dragging, you can view
+                updates in the detailed brush chart. For both the heatmap and
+                brush chart, there is a tooltip on hovering over a cell to show
+                the number of medals won by the country in the selected season
+                for the corresponding year.
               </li>
               <br />
               <li>
                 <strong>Critique:</strong> There is a lot of information being
                 displayed in the heatmap, so users may not be able to completely
-                understand the data at a glance. Users may also not be able to
-                compare the performance of different countries in different
-                seasons as the heatmap only shows the performance of a country
-                in a specific season and you have to use the radio buttons to
-                switch between seasons, so you might have to manually remember
-                the trends of the previous season. Due to the sequential color
-                scheme, users might not be able to identify the magnitude of the
-                number of medals won by a country in each year without hovering
-                over cells. In the brush chart, it is hard to select a country
-                as multiple countries are stacked on top of each other in the
-                same bar. and can face difficulty in distinguihsing between
-                similarly colored cells.
+                understand the data at a glance. The heatmap is useful for
+                identifying groups or clsuters of similar performance, but users
+                may also not be able to compare the performance of different
+                countries in different seasons as the heatmap only shows the
+                performance of a country in a specific season and you have to
+                use the radio buttons to switch between seasons, so you might
+                have to manually remember the trends of the previous season. Due
+                to the sequential color scheme, users might not be able to
+                identify the magnitude of the number of medals won by a country
+                in each year without hovering over cells. In the brush chart, it
+                is hard to select a country as multiple countries are stacked on
+                top of each other in the same bar and can face difficulty in
+                distinguishing between similarly colored cells. There is a lot
+                of interactivity in the charts (tridirectional links), so users
+                might get overwhelmed with the number of options to choose from
+                and might not know where to start exploring the data.
               </li>
             </ul>
-            <h3>Faceted Bar Chart</h3>
+            <h3>
+              Faceted Bar Chart (Bidirectional Link to Heatmap and Brush Chart
+              View)
+            </h3>
             <ul>
               <li>
                 <strong>Mark:</strong> The mark type used is a segment
@@ -308,8 +329,11 @@
                 <strong>Channels:</strong> The horizontal position and order
                 channel denotes medal counts starting from the minimum to the
                 maximum, while the vertical position channel represents a
-                country (NOC). The length of the bars represents the number of
-                medals won by the country in a specific year.
+                country (NOC). The 1D length of the bars represents the number
+                of medals won by the country in a specific year. The bar chart
+                has been faceted by country so that each country has its own bar
+                and each bar is aligned to the bottom of the chart for
+                comparison with a common scale.
               </li>
               <br />
               <li>
@@ -318,24 +342,42 @@
                 human beings are more likely to compare objects on a common
                 scale than on unaligned scales. It is easy to compare between 2
                 countries because the length of the bars is proportional to the
-                number of medals won by a country in a specific year.
+                number of medals won by a country in a specific year. The
+                vertical position channel on a common scale is also easy to
+                compare between 2 countries because the bars are aligned to the
+                bottom of the chart. The 1D length of the bars is a magnitude
+                ordered channel and adheres to the principle of expressiveness.
+                The medal counts are encoded on the horizontal position channel
+                as a magnitude ordered channel and adheres to the principle of
+                expressiveness. All these channels are ranked highly in the list
+                of magnitude channels so we are following the principle of
+                effectiveness.
               </li>
               <br />
               <li>
-                <strong>Interactivity:</strong> There is a year dropdown menu to
+                <strong>Interactivity:</strong> This view is bidirectionally
+                linked to the heatmap view and brush chart view. Clicking on any
+                country in the chart will also show the country trends in the
+                heatmap and brush charts. There is a year dropdown menu to
                 select a specific year to display the medal counts won by all
-                country in that year. You can also select a season to display
-                the medal counts for Summer or Winter using radio buttons.
-                Faceting by country ensures clarity when exploring multiple data
-                points. Lastly, there is a tooltip on hovering over a bar to
-                show the number of medals won by the country in the selected
-                season for the corresponding year.
+                country in that year and when you select a year, the heatmap
+                will display that year with a vertical red line. You can also
+                select a season to display the medal counts for Summer or Winter
+                using radio buttons. Faceting by country ensures clarity when
+                exploring multiple data points. Lastly, there is a tooltip on
+                hovering over a bar to show the number of medals won by the
+                country in the selected season for the corresponding year.
               </li>
               <br />
               <li>
                 <strong>Critique:</strong> For some seasons in certain years,
                 not all countries take part in the Games, so users might see
                 fewer or more countries on choosing different years or seasons.
+                The dropdown menu for selecting a specific year can be long to
+                scroll through and can get overwhelming pretty quickly if you
+                are not familiar with the data. Not all countries can be shown
+                in the chart due to information density issues, so users have to
+                settle for a smaller number of countries (top performing ones).
               </li>
             </ul>
             <h3>Line Chart Matrix</h3>
@@ -365,6 +407,10 @@
                 as country is a nominal attribute. These channels are ranked
                 highly in the list of magnitude and identity channels so we are
                 following the principles of effectiveness and expressiveness.
+                The line chart matrix is column-faceted by sports so that users
+                don't have to scroll through a long list of sports to find the
+                one they are interested in and these faceted charts share a
+                common axis for effective comparison.
               </li>
               <br />
               <li>
@@ -455,7 +501,8 @@
                 <strong>Critique:</strong> The country selection dropdown has 50
                 options so it can be a bit long to scroll through and can get
                 overwhelming pretty quickly if you are not familiar with NOC
-                codes. The area density chart can be hard to identify small and
+                codes. The area density chart is useful to identify general
+                patterns in the data, but it can be hard to identify small and
                 subtle differences in medal counts between years.
               </li>
             </ul>
