@@ -214,9 +214,11 @@
               <li>
                 <strong>Mark:</strong> The mark type used is a point to
                 represent each country's performance in a specific year in the
-                heatmap. In the brush chart, the mark type used is a segment to
-                represent the medal counts won by a country in a specific year.
+                heatmap (mark_rect). In the brush chart, the mark type used is a
+                segment (mark_bar) to represent the medal counts won by a
+                country in a specific year.
               </li>
+              <br />
               <li>
                 <strong>Channels:</strong> For the heatmap, the horizontal
                 position and order channel denotes years starting from 1896 to
@@ -233,6 +235,7 @@
                 represent the number of medals won by a country. The color hue
                 channel represents the type of season (Summer or Winter).
               </li>
+              <br />
               <li>
                 <strong>Characteristics of Channels:</strong> In the heatmap,
                 the sequential color scheme is used to encode magnitude of the
@@ -243,7 +246,7 @@
                 saturation channel and position channel are magnitude-ordered
                 channels and adhere to the principle of effectiveness.
                 <br />
-                In the brush chart, the 2 colors (orange and blue) on the
+                In the brush chart, the 2 color hues (orange and blue) on the
                 opposite ends of the color hue channel help the users identify
                 the Summer and Winter seasons clearly without getting mixed up.
                 The years are ordered from left to right in an increasing order
@@ -251,6 +254,7 @@
                 ordered from top to bottom in an increasing order enabling top
                 to bottom reading.
               </li>
+              <br />
               <li>
                 <strong>Interactivity:</strong> The heatmap is bidirectionally
                 linked to the detailed brush chart view below it. Clicking on a
@@ -274,6 +278,7 @@
                 medals won by the country in the selected season for the
                 corresponding year.
               </li>
+              <br />
               <li>
                 <strong>Critique:</strong> There is a lot of information being
                 displayed in the heatmap, so users may not be able to completely
@@ -294,9 +299,11 @@
             <h3>Faceted Bar Chart</h3>
             <ul>
               <li>
-                <strong>Mark:</strong> The mark type used is a segment (bar) to
-                represent the medal counts won by a country in a specific year.
+                <strong>Mark:</strong> The mark type used is a segment
+                (mark_bar) to represent the medal counts won by a country in a
+                specific year.
               </li>
+              <br />
               <li>
                 <strong>Channels:</strong> The horizontal position and order
                 channel denotes medal counts starting from the minimum to the
@@ -304,6 +311,7 @@
                 country (NOC). The length of the bars represents the number of
                 medals won by the country in a specific year.
               </li>
+              <br />
               <li>
                 <strong>Characteristics of Channels:</strong> The position
                 channel on a common scale follows Weber's Law which states that
@@ -312,6 +320,7 @@
                 countries because the length of the bars is proportional to the
                 number of medals won by a country in a specific year.
               </li>
+              <br />
               <li>
                 <strong>Interactivity:</strong> There is a year dropdown menu to
                 select a specific year to display the medal counts won by all
@@ -322,6 +331,7 @@
                 show the number of medals won by the country in the selected
                 season for the corresponding year.
               </li>
+              <br />
               <li>
                 <strong>Critique:</strong> For some seasons in certain years,
                 not all countries take part in the Games, so users might see
@@ -331,9 +341,10 @@
             <h3>Line Chart Matrix</h3>
             <ul>
               <li>
-                <strong>Mark:</strong> The mark type used is a line (path) to
-                represent a country over multiple years.
+                <strong>Mark:</strong> The mark type used is a line (mark_line)
+                to represent a country over multiple years.
               </li>
+              <br />
               <li>
                 <strong>Channels:</strong> The horizontal position and order
                 channel denotes years starting from 1896 to 2016, while the
@@ -343,6 +354,7 @@
                 identity channel for categorical attributes represents a country
                 (NOC).
               </li>
+              <br />
               <li>
                 <strong>Characteristics of Channels:</strong> The years are
                 ordered from left to right in an increasing order enabling left
@@ -354,6 +366,7 @@
                 highly in the list of magnitude and identity channels so we are
                 following the principles of effectiveness and expressiveness.
               </li>
+              <br />
               <li>
                 <strong>Interactivity:</strong> By default, the line chart shows
                 the medal counts won by 5 countries in all years in certain
@@ -373,6 +386,7 @@
                 show the number of medals won by a country in the selected
                 season for the corresponding year for that sport.
               </li>
+              <br />
               <li>
                 <strong>Critique:</strong> When the chart is showing all the
                 countries in a season, it is hard to compare the performance of
@@ -390,10 +404,11 @@
             <ul>
               <li>
                 <strong>Mark:</strong> The mark type used is an interlocking
-                area (poly) to represent the medal counts won by a country in a
-                specific year. The bottom chart uses a mark type of point to
-                represent an individual country.
+                area (mark_area) to represent the medal counts won by a country
+                in a specific year. The bottom chart uses a mark type of point
+                to represent an individual country.
               </li>
+              <br />
               <li>
                 <strong>Channels:</strong> The horizontal position and order
                 channel denotes years starting from 1896 to 2016, while the
@@ -403,6 +418,7 @@
                 identity channel for categorical attributes represents a country
                 (NOC).
               </li>
+              <br />
               <li>
                 <strong>Characteristics of Channels:</strong> The years are
                 ordered from left to right in an increasing order enabling left
@@ -415,6 +431,7 @@
                 magnitude and identity channels so we are following the
                 principles of effectiveness and expressiveness.
               </li>
+              <br />
               <li>
                 <strong>Interactivity:</strong> The first thing a user has to
                 decide is which country they want to see the trends for. You can
@@ -433,6 +450,7 @@
                 Lastly, both charts have tooltips that have information about
                 the number of medals won by a country in a specific year.
               </li>
+              <br />
               <li>
                 <strong>Critique:</strong> The country selection dropdown has 50
                 options so it can be a bit long to scroll through and can get

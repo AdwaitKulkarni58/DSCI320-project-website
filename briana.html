@@ -198,55 +198,256 @@
             <h3>Linked Scatterplot and Density Plot</h3>
             <ul>
               <li>
-                <strong>Mark:</strong>
+                <strong>Mark:</strong> The mark for the scatterplot being used
+                is mark_circle() as it allows the plot to point out a specific
+                combination of peak height and peak weight, for different
+                sports. This results in each sport on the scatter plot having
+                three points to represent it: one for each type of medal. For
+                the density chart the area mark was used as we are attempting to
+                represent the number of athletes over the height and weight
+                ranges of athletes in each sport without using bins.
               </li>
+              <br />
               <li>
-                <strong>Channels:</strong>
+                <strong>Channels:</strong> In the scatter plot the horizontal
+                x-channel is being used to indicate the peak heights, while the
+                vertical y-channel is being used to indicate the peak weights of
+                athletes. The density plot is faceted vertically by sport, and
+                horizontally by sex, and the two density plots for weight and
+                height have been horizontally concatenated to one another. The
+                horizontal x-encoding depicts weight or height, depending on
+                which chart, and all the plots for weight/height for the
+                different sports use a common x-axis which makes the
+                distributions easier to compare between sexes and sports. The
+                vertical y-encoding is used to show the density of the different
+                medal groups over the height and weight ranges.
               </li>
+              <br />
               <li>
-                <strong>Characteristics of Channels:</strong>
+                <strong>Characteristics of Channels:</strong> The color in this
+                view is encoding the type of medal won (Gold, Silver, Bronze, No
+                Medal). This color scheme is kept uniform across the two plots
+                so they are easy to compare, so the orange points on the scatter
+                plot correspond to the orange distributions on the distribution
+                chart, and they both represent athletes who won Gold medals.
+                Tooltips are used in the scatterplot to denote which sport each
+                point represents while in the density plot tooltips show the
+                type of medal won as well as the height or weight on the x-axis
+                that the location of the cursor corresponds to. This way it is
+                easier to accurately identify the peak height and weight per
+                gender of the different sports plotted.
               </li>
+              <br />
               <li>
-                <strong>Interactivity:</strong>
+                <strong>Interactivity:</strong> Opacity was used for
+                interactivity encoding, which allows the user to select and view
+                only one of the medal types. For example, one can select gold
+                medals in the legend, and the distributions of athletes who have
+                won gold medals will be emphasised by the reduction of opacity
+                for the non-selected medal types. Upon legend selection, the
+                scatter plot only shows the points belonging to that medal type
+                for each sport (so now each sport will only have one point in
+                the scatterplot), which we have encoded by using a transform
+                filter on the selection.
               </li>
+              <br />
               <li>
-                <strong>Critique:</strong>
+                <strong>Critique:</strong> This view successfully allows us to
+                answer the research question because it lets us visualize the
+                heights and weights at which athletes perform best for all
+                sports, while also providing us more detailed information of the
+                distributions of athletes’ heights and weights for some
+                pre-selected sports. However, the drawback of this view is that
+                it doesn’t allow us to visualize the more detailed distribution
+                plots for any sport - only for the ones displayed there. An
+                improvement on the plot would be to allow a brush selection on
+                the scatterplot, which would be linked to the distribution plots
+                so that they only show the top 5 sports in the brush-selected
+                sports in the scatterplot.
               </li>
             </ul>
             <h3>Faceted Histogram and Line Plot</h3>
             <ul>
               <li>
-                <strong>Mark:</strong>
+                <strong>Mark:</strong> The mark being used in the histogram is
+                mark_bar() as this allows for effective comparison of the length
+                of bars to determine the difference in counts of records. In the
+                line graph the mark being used is mark_line() although we have
+                specified point=True so that the ‘resolution’ of the data is
+                also shown. The line mark was used for this part of the chart
+                because it shows connections between points, which are
+                intuitively connecting the points in the user's mind, making it
+                clear they belong to the same age group. This makes the graph
+                more easily interpretable.
               </li>
+              <br />
               <li>
-                <strong>Channels:</strong>
+                <strong>Channels:</strong> In the histogram the horizontal axis
+                is being used to represent age groups (binned every 2 years),
+                while the vertical axis represents the count of athletes in each
+                age group, as is customary for a histogram. The histograms are
+                faceted by sex, in order to allow for comparison between female
+                and male athletes, as is pertinent to the research question.
+                This faceting highlights the similarities and differences
+                between both the distribution of ages of athletes per gender and
+                their success in the sport selected. The horizontal channel of
+                the line graph is the year, while the y-axis shows the ratio of
+                medals to no medals. Although the line graph is also faceted by
+                sex, they still use the same x-axis, as is true for the
+                histogram. The line graph allows the user to determine which age
+                groups have had the most success over time.
               </li>
+              <br />
               <li>
-                <strong>Characteristics of Channels:</strong>
+                <strong>Characteristics of Channels:</strong> In the histogram
+                color is used to depict the success of athletes in different age
+                groups. The success was calculated by computing the ratio of
+                medals (of all types) won to null medals per sport, per age
+                group. Originally a continuous color scale was used, stretching
+                from light green to dark blue, which resulted in all the colors
+                above a ratio 1 looking like the same shade of dark blue, and
+                many of the frequent ratios near zero all appeared as the same
+                light green shade. Therefore a manual color scale was created,
+                wherein color changes happen fast at small ratios close to zero,
+                and then they happen slower at higher ratios because there are
+                fewer higher ratios. I also specified that above 1 the color
+                scale should change to another color, as 1 is sort of a
+                neutral/central point to the data where the number of athletes
+                who won medals in a specific age group of a sport is equal to
+                the number of athletes who did not win medals. This color
+                encoding makes the plot more effective because it allows the
+                user to see the data at ‘high resolution’ of color. The user
+                also knows that if they see purple there are more athletes who
+                have won medals in a group than athletes who have not won
+                medals, making that age group more ‘successful’. In general the
+                more blue the color the higher the ratio of athletes who have
+                won medals to those who have not won, although still below 1.
+                The color encoding was not kept the same for the line graph; the
+                colors are representing age groups instead of the medal ratio
+                and therefore it would be misleading to have a similar/the same
+                color encoding. Additionally, a categorical color scheme was
+                used for the age groups as we are treating them as a categorical
+                variable because our intention with this plot is to investigate
+                the success of specific age groups over time.
               </li>
+              <br />
               <li>
-                <strong>Interactivity:</strong>
+                <strong>Interactivity:</strong> Initially the user must select a
+                sport that they would like to view the athlete’s age information
+                for via the dropdown widget. This plot also employs
+                bi-directional linking between the bars in the histogram and the
+                lines on the line graph. When a range of age groups is selected
+                on the histogram using the brush, only those age groups are
+                plotted on the line charts. This was executed in code via a
+                transform filter using the brush on the line plot. Conversely,
+                if the user clicks on one of the lines presented in the line
+                graph, this line is made more opaque compared to the other
+                lines, and it also makes the selected age group appear more
+                opaque than the non-selected groups in the histogram.
               </li>
+              <br />
               <li>
-                <strong>Critique:</strong>
+                <strong>Critique:</strong> This visualization is effective for
+                finding the top performing ages of male and female athletes for
+                different sports because it displays information expressively
+                and it reduces the amount of time needed to be spent figuring
+                out the visualization by being intuitive to the user. A bar
+                chart is a widely recognized graph, understood by most people so
+                it takes little time to fathom the information it is displaying.
+                Additionally, faceting the graphs vertically to display the male
+                and female statistics separately allows for effective comparison
+                between the sexes against a common axis. The use of the ratio
+                successfully encodes the medal data as one variable represented
+                by color, which is easy for users to process. The use of
+                interactivity in this graph makes it particularly intuitive
+                because it connects the charts within the view to one another.
+                The line graph on the right is thus clearly linked to the
+                information on the left while also providing more detailed
+                information about the plot on the left. This plot allows us to
+                go beyond simply answering the research question by adding the
+                element of time.
               </li>
             </ul>
             <h3>Heatmap</h3>
             <ul>
               <li>
-                <strong>Mark:</strong>
+                <strong>Mark:</strong> Since this is a heatmap, the mark used is
+                mark_rect() as this allows us to keep the areas the same, thus
+                not encoding any information within area, but allowing us to
+                change the color of each rectangle to depict the difference
+                between medals won by female and male athletes, normalized by
+                the sum of medals won by all athletes in that sport. This way we
+                can show this difference per sport and as it changes over time,
+                as the research question demands.
+              </li>
+              <br />
+              <li>
+                <strong>Channels:</strong> The x-axis on this chart shows the
+                year in which the olympics took place, while the y-axis reflects
+                the sport the athletes competed in. This is most effective
+                because it allows us to see all the sports at once, over time,
+                with information about medals won and sex of athletes who won
+                the medals - so there’s a lot of data being displayed. Therefore
+                the user can determine in which sports the female or male team
+                of a country have been dominating, and for which sports the
+                success of both genders is roughly the same. The dropdowns allow
+                the user to choose only one country to view, and also the option
+                to choose which season (winter or summer) they would like to
+                view the sports for. We have provided the option to select the
+                season as it allows users who know roughly which data they want
+                to see to visualize less data at a time which makes it less
+                overwhelming and easier to process.
+              </li>
+              <br />
+              <li>
+                <strong>Characteristics of Channels:</strong> The color encoding
+                is being used to show the difference in medals won by female
+                athletes minus male athletes, normalized by the total number of
+                medals won in that sport in that year in the selected country.
+                Since the color scale is depicting a difference there is a clear
+                central point to the data where the difference is zero and the
+                number of medals won by both genders is equal. Consequently we
+                have employed a diverging color scale where the color is gray at
+                zero. Gray at zero was chosen because there are years and sports
+                for each country where none of their athletes (female or male)
+                won a medal, so there is ‘no data’ for that rectangle on the
+                graph, which appears white. Thus the nan values are
+                differentiated from the points/rectangles where the number of
+                medals won by men and women was the same. This color encoding,
+                along with how we have placed the channels, is successful
+                because it allows users to easily identify rows (which are
+                sports) where the color is a dark hue over a longer horizontal
+                range, answering our research question. Since the heatmap’s
+                color itself doesn’t show any information about the total number
+                of medals won by that country (since we have normalized by
+                this), and it might be useful to know, we have included this
+                information in the tooltip.
               </li>
               <li>
-                <strong>Channels:</strong>
+                <strong>Interactivity:</strong> The interactivity of this map is
+                mainly in the dropdown menu which allows the user to select
+                which country for which they would like to view the data, as
+                well as which season of sports they would like to see. This
+                makes the graph accessible to people who are just wanting to
+                explore the data without a real purpose, as well as those who
+                want to investigate the details of a season, for example.
               </li>
               <li>
-                <strong>Characteristics of Channels:</strong>
-              </li>
-              <li>
-                <strong>Interactivity:</strong>
-              </li>
-              <li>
-                <strong>Critique:</strong>
+                <strong>Critique:</strong> This map is highly effective for
+                answering the research question as it allows us to see all the
+                sports at once, and we can evaluate the ‘consistency’ of male or
+                female dominance in a sport due to the time component.
+                Additionally, the color encoding is extremely effective because
+                it allows users to easily visually pick out rows where there is
+                a long horizontal line where the color is staying a consistently
+                dark due. This chart’s pitfall, however, is that the user is
+                unable to compare between countries as the country must be
+                selected beforehand. We also cannot infer much information about
+                the performance of the country overall in each sport as we
+                cannot simply assume each white rectangle is where they haven’t
+                won any medals because we have no assurance that they even
+                participated in that year. This information, however, is not
+                required by our research question.
               </li>
             </ul>
           </div>
