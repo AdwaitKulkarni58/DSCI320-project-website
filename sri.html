@@ -53,19 +53,36 @@
               <h2>Geography & Seasons</h2>
             </header>
             <p class="align-center">
-              Following are the research questions supported by the
-              visualizations:
+              The visualizations below explore Olympic team performance across
+              different host cities and seasons from 1896 to 2016. The data is
+              visualized using pie charts, bar charts, line charts, heat maps,
+              and scatter plots. This dashboard explores patterns in medal
+              distribution, host city advantages, and sport-specific
+              contributions to overall success. These visualizations allow users
+              to filter by host city, season (Summer vs. Winter), and sport to
+              examine trends and disparities in medal counts. Following are the
+              research questions supported by the visualizations:
             </p>
 
             <ul>
               <li>
-                <strong>Question 1</strong>
+                <strong
+                  >Do host teams experience a medal boost across sports in their
+                  host cities when compared to non-host teams?</strong
+                >
               </li>
               <li>
-                <strong>Question 2 </strong>
+                <strong
+                  >Which sports contribute the most to a team's overall medal
+                  count, and how does this vary by host city and season?</strong
+                >
               </li>
               <li>
-                <strong>Question 3 </strong>
+                <strong
+                  >How does the number of teams that win medals vary by host
+                  city, and are there cities where medals are more concentrated
+                  among fewer teams?</strong
+                >
               </li>
             </ul>
             <div>
@@ -79,6 +96,70 @@
                   location.reload();
                 }
               </script>
+            </div>
+            <p class="align-center">
+              The first view is a 3 chart dashboard comprising two pie charts
+              and a bar chart. The first pie chart displays the Host Team based
+              on Host City. The bar chart shows the top n (usually 20 but some
+              sports have less than 20 teams competing) teams for a given sport.
+              We can then click on the bars to see a breakdown of medal
+              distribution for the selected Team. We can then compare
+              distribution and medal counts between the Host Team and other
+              Non-Host Teams and if they rank in the top n teams for that sport.
+            </p>
+            <div class="iframe-container">
+              <iframe
+                src="charts/sri/chart1a.html"
+                width="1300"
+                height="650"
+                frameborder="0"
+              ></iframe>
+            </div>
+            <p class="align-center">
+              The second view is an Interval Selection for a date range. We can
+              select a date range and we get a more granular view of the overall
+              trend in medal count for Host Teams vs Non-Host Teams.
+            </p>
+            <div class="iframe-container">
+              <iframe
+                src="charts/sri/chart1b.html"
+                width="1450"
+                height="700"
+                frameborder="0"
+              ></iframe>
+            </div>
+            <p class="align-center">
+              The third view is Heatmap with Season, Sport and Host City
+              filters. This shows which sports contribute the most to a Teams
+              overall medal count for any given city. This is useful to find
+              outliers or identify which sports some Teams are strong/weak in
+              and compare performance in different cities.
+            </p>
+            <div class="iframe-container">
+              <iframe
+                src="charts/sri/chart2.html"
+                width="1300"
+                height="570"
+                frameborder="0"
+              ></iframe>
+            </div>
+            <p class="align-center">
+              The fourth view is a bi-directionally linked dashboard of a
+              scatter plot and bar chart. Users can control the number for Teams
+              they want to see (1-30). Users can also brush over the scatterplot
+              or click on a city to see a detailed view of the number of teams
+              that won medals and how many other cities had the same number of
+              teams win and vice versa with the bar chart. We also have a custom
+              colour scheme to have unique colours for each Team.
+            </p>
+            <div class="iframe-container">
+              <iframe
+                src="charts/sri/chart3.html"
+                width="1300"
+                height="530"
+                frameborder="0"
+              ></iframe>
+            </div>
           </div>
         </div>
       </div>
@@ -93,18 +174,39 @@
             </header>
             <p>
               The visualizations above support the following tasks by employing
-              ...
+              interactive scatterplots with linked detail brush charts,
+              interactive bar charts, heatmaps, and pie charts that dynamically
+              adapt based on user selections:
             </p>
 
             <ul>
               <li>
-                <strong>Task 1</strong>
+                <strong>Analyze Host Team Performance:</strong> To determine
+                whether host teams experience a medal boost in their home cities
+                compared to non-host teams, and how this varies between the
+                Summer and Winter Olympics.
               </li>
               <li>
-                <strong>Task 2 </strong>
+                <strong>Explore Medal Distribution by Sport:</strong> To
+                identify which sports contribute most to a team’s overall medal
+                count, and analyze how this varies across different host cities
+                and Olympic seasons.
               </li>
               <li>
-                <strong>Task 3 </strong>
+                <strong>Understand City-Specific Patterns:</strong> To analyse
+                whether certain host cities exhibit unique trends in medal
+                distribution or concentration of success.
+              </li>
+              <li>
+                <strong>Explore Host vs. Non-Host Trends Over Time:</strong> To
+                select a custom date range and compare the long-term trends in
+                medal performance between Host and Non-Host teams.
+              </li>
+              <li>
+                <strong>Drill Down by City, Team, or Sport:</strong> To
+                interactively select and explore specific teams, cities, or
+                sports, revealing granular patterns in medal counts,
+                distribution, and performance using linked charts and filters.
               </li>
             </ul>
           </div>
