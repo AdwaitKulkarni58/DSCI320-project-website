@@ -139,9 +139,9 @@
               10 sports using the drop-down option. The bar chart horizontally
               added to this view shows the total medal counts per age group
               (binned), making it easy to figure out which age groups dominate
-              in different events. Lately, the interactive legend allows users
-              to filter by medal type and focus the analysis on only one medal
-              type at a time.
+              in different events. Lately, the interactive radio button allows
+              users to filter by medal type and focus the analysis on only one
+              medal type at a time.
             </p>
             <div class="iframe-container">
               <iframe
@@ -317,25 +317,25 @@
               </li>
               <li>
                 <strong>Channels:</strong> Horizontal Position & Order (Density
-                Plot & Bar Chart): Represents the age of athletes.
+                Plot & Bar Chart): Represents the age of athletes. For the
+                density plot, this shows how age is distributed, while in the
+                bar chart, it corresponds to the age bins (e.g., 0-10, 10-20,
+                20-30 etc).
                 <br />
                 Vertical Position (Density Plot): Represents the density of
                 medalists of different ages.
                 <br />
                 Vertical Position (Bar Chart): This represents the total count
                 of medalists in each age bin.
-                <br />
-                Colour Hue: Represents medal type (None, Gold, Silver, Bronze).
-                The None type represents athletes who didn't win anything.
               </li>
               <li>
                 <strong>Characteristics of Channels:</strong> The Density plot
                 allows for visualizing distributions, making it easier to see
                 where the majority (most density) of medalists fall in terms of
                 age. The bar chart provides a quick overview of age bins, giving
-                an easier way to compare total counts. Colour hue ensures
-                medal-type differentiation, allowing users to analyze which age
-                groups dominate gold, silver, bronze or non-winners (None).
+                an easier way to compare total counts. The scale of the density
+                and bar chart changes according to the selected medal type and
+                sport.
               </li>
               <li>
                 <strong>Interactivity:</strong> The dropdown selection allows
@@ -343,20 +343,20 @@
                 once. Hovering over the Density plot reveals tooltips with
                 precise information about age distributions and density. In the
                 case of the bar chart it gives precise age and count of records.
-                Clicking on a medal type in the legend filters the
-                visualization, dimming the other medals to highlight trends for
-                a single category. This allows users to view the trends for a
-                single medal type at once.
+                A radio button for medal selection allows users to toggle
+                between viewing and filtering for a specific medal type (None
+                for no medal win, Bronze, Silver, and Gold). The color
+                associated with each medal type also clarifies comparison.
               </li>
               <li>
                 <strong>Critique:</strong> The Density plot might be difficult
                 to interpret for users unfamiliar with density estimation and
                 just in general it is not easily interpretable at first glance.
-                Outliers (very young or old medalists) might distort the
-                visualization if not handled properly. Stacking medal counts in
-                the bar chart could make it harder to compare total medal
-                distributions between age groups. Luckily, the interactive
-                legend helps here.
+                The lack of color hue might make it harder to recognize medal
+                categories immediately, but the radio button ensures clarity by
+                showing one medal type at a time. Comparing different medals
+                requires switching between selections rather than seeing them
+                side by side or stacked on top of each other.
               </li>
             </ul>
           </div>
