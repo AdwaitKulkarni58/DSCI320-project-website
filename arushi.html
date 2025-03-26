@@ -53,19 +53,38 @@
               <h2>Sports and Events</h2>
             </header>
             <p class="align-center">
-              Following are the research questions supported by the
-              visualizations:
+              The visualizations below explore the participation and performance
+              of countries and athletes in Sports and Events in the Olympic
+              Games from 1896 to 2016. Using interactive bar charts,
+              bidirectionally linked line charts, and density-bar chart
+              combinations, the data is analyzed to understand trends in
+              participation by country, athlete demographics by gender over
+              time, and the age distribution of medalists. The visualizations
+              are interactive, allowing users to select specific sports, filter
+              by gender, track country participation over time, and compare
+              athlete demographics across sports.
             </p>
 
             <ul>
               <li>
-                <strong>Question 1</strong>
+                <strong
+                  >Which sports and events have experienced the most significant
+                  increase or decrease in country participation over the
+                  years?</strong
+                >
               </li>
               <li>
-                <strong>Question 2 </strong>
+                <strong
+                  >How has participation in different sports evolved over time
+                  based on gender, and are there specific sports where the
+                  gender gap has widened or narrowed?</strong
+                >
               </li>
               <li>
-                <strong>Question 3 </strong>
+                <strong
+                  >Are there any sports or events that exhibit a notable age gap
+                  between medalists?</strong
+                >
               </li>
             </ul>
             <div>
@@ -80,13 +99,55 @@
               </script>
             </div>
             <p class="align-center">
-              The visualizations below explore the performance of countries in
+              These bidirectionally linked line charts show the participation
+              trends in the top 5 sports by NOC and their associated top 3
+              events. The user can select the sport using the drop-down below
+              and analyse the trends in both the plots. They are vertically
+              connected, making a view that allows easy comparison. Also, the
+              bidirectional linking allows users to explore connections between
+              sports and their events, ensuring deeper insights into
+              participation changes.
+            </p>
+            <div class="iframe-container">
+              <iframe
+                src="charts/arushi/final_chart.html"
+                width="1200"
+                height="1200"
+                frameborder="0"
+              ></iframe>
+            </div>
+            <p class="align-center">
+              This plot tracks the number of male and female participants in the
+              top 10 sports across the years, allowing users to see if gender
+              representation has become more balanced. By using bars and colour
+              encoding for gender, it highlights sports with increasing or
+              decreasing participation gaps over time. The interactive legend
+              allows users to view trends by gender.
+            </p>
+            <div class="iframe-container">
+              <iframe
+                src="charts/arushi/base.html"
+                width="1200"
+                height="650"
+                frameborder="0"
+              ></iframe>
+            </div>
+            <p class="align-center">
+              The density plot reveals the distribution of medalists' ages,
+              helping a user analyse whether a certain sport has younger or
+              older athletes winning medals. Users can select any one of the top
+              10 sports using the drop-down option. The bar chart horizontally
+              added to this view shows the total medal counts per age group
+              (binned), making it easy to figure out which age groups dominate
+              in different events. Lately, the interactive legend allows users
+              to filter by medal type and focus the analysis on only one medal
+              type at a time.
             </p>
             <div class="iframe-container">
               <iframe
                 src="charts/arushi/final_plot.html"
-                width="1200"
-                height="1350"
+                width="1350"
+                height="700"
                 frameborder="0"
               ></iframe>
             </div>
@@ -103,19 +164,40 @@
               <h2>Tasks Supported</h2>
             </header>
             <p>
-              The visualizations above support the following tasks by employing
-              ...
+              The visualizations above support the following tasks by utilizing
+              interactive bar charts, bidirectionally linked line charts, and
+              density-bar chart combinations, allowing users to dynamically
+              explore sports participation by country, athlete demographics by
+              gender over time, and age distribution for medal winners:
             </p>
 
             <ul>
               <li>
-                <strong>Task 1</strong>
+                <strong>Analyze Participation Trends:</strong> Identifying how
+                athlete participation in different sports has evolved over time,
+                with a focus on gender distribution and changes in
+                representation.
               </li>
               <li>
-                <strong>Task 2 </strong>
+                <strong>Track Country Participation:</strong> Exploring how many
+                countries have competed in top sports and events over the years.
               </li>
               <li>
-                <strong>Task 3 </strong>
+                <strong>Compare Growth in Sports & Events:</strong> Identifying
+                which sports and events have gained or lost country
+                participation over time, with bidirectional linking to focus on
+                specific years.
+              </li>
+              <li>
+                <strong>Examine Athlete Age Distributions:</strong> Analyzing
+                the age range of medalists across different sports, identifying
+                which events favor younger or older athletes.
+              </li>
+              <li>
+                <strong>Interactive Filtering for Deeper Insights:</strong>
+                Users can select specific sports, events, gender or medal types,
+                to refine their analysis, enabling a focused exploration of
+                trends and comparisons.
               </li>
             </ul>
           </div>
@@ -130,58 +212,178 @@
             <header class="align-center">
               <h2>Visualization Design Justification</h2>
             </header>
-            <h3>Visualization 1</h3>
+            <h3>Bidirectionally Linked Line Charts</h3>
             <ul>
               <li>
-                <strong>Mark:</strong>
+                <strong>Mark:</strong> The mark type used is a line (path) to
+                represent the number of participating countries in different
+                sports/events over time in both the line charts linked together
+                by bidirectional linking.
+                <br />
+                The Line mark indicates how the relationship evolves over time,
+                showing increases, decreases, or reversals.
               </li>
               <li>
-                <strong>Channels:</strong>
+                <strong>Channels:</strong> Horizontal Position & Order:
+                Represents years in an increasing sequence.
+                <br />
+                Vertical Position: Represents the number of participating
+                countries in a sport/event.
+                <br />
+                Color Hue: Color Hue: Represents different sports/events,
+                distinguishing participation trends.
               </li>
               <li>
-                <strong>Characteristics of Channels:</strong>
+                <strong>Characteristics of Channels:</strong> Different colors
+                of the lines ensure the differentiation and easy following of
+                the lines.
+                <br />
+                The ordering of years follows a natural chronological sequence,
+                helping in comprehension.
               </li>
               <li>
-                <strong>Interactivity:</strong>
+                <strong>Interactivity:</strong> Using the dropdown selection,
+                users can select a specific sport, which inadvertently affects
+                the events plot too, displaying the top 3 events associated with
+                that sport.
+                <br />
+                Hovering over the event plot displays its title, year, and NOC
+                count.
+                <br />
+                Bidirectional linking connects the trends of sports and their
+                corresponding top 3 events, allowing users to see how
+                participation has evolved. It allows users to highlight a time
+                range and view corresponding trends in both graphs.
               </li>
               <li>
-                <strong>Critique:</strong>
+                <strong>Critique:</strong> Some sports/events may have small
+                fluctuations, making it difficult to see trends without zooming
+                in.
+                <br />
+                A normalization option (e.g., showing percentage growth instead
+                of raw numbers) could make comparisons clearer.
               </li>
             </ul>
-            <h3>Visualization 2</h3>
+            <h3>Bar Chart with Interactive Legend and Dropdown</h3>
             <ul>
               <li>
-                <strong>Mark:</strong>
+                <strong>Mark:</strong> The mark type used are bars representing
+                the number of participants in the top 10 sports over the years,
+                with separate colours for male (light blue) and female (pink)
+                participants.
               </li>
               <li>
-                <strong>Channels:</strong>
+                <strong>Channels:</strong> Horizontal Position & Order:
+                Represents the years from the start of the Olympics to the
+                present (1986-2016).
+                <br />
+                Vertical Position & Order: Represents the number of participants
+                (count) in a given sport.
+                <br />
+                Color Hue: Represents gender (male or female) with distinct
+                colours light blue and pink.
               </li>
               <li>
-                <strong>Characteristics of Channels:</strong>
+                <strong>Characteristics of Channels:</strong> The left-to-right
+                order of years follows a naturally ordered reading flow, making
+                trends easy to follow.
+                <br />
+                The vertical axis uses an ordered scale, allowing for a
+                straightforward comparison of participation trends through the
+                height of the bars.
+                <br />
+                The colour hue channel ensures that male and female
+                participation trends are visually distinct. Stacked or grouped
+                bars allow direct comparisons within the same sport.
               </li>
               <li>
-                <strong>Interactivity:</strong>
+                <strong>Interactivity:</strong> A drop-down menu allows users to
+                filter participation trends by sport. It allows users to select
+                and view trends in any of the 10 sports.
+                <br />
+                Hovering over a bar displays a tooltip showing the exact sport,
+                sex, count of IDs, and year through the use of a tooltip.
+                <br />
+                An interactive legend allows users to view the bars only for
+                male or female athletes by clicking on the legend. This allows
+                for a more clearer understanding of trends by gender.
               </li>
               <li>
-                <strong>Critique:</strong>
+                <strong>Critique:</strong> Stacked bars can make it difficult to
+                compare male and female participation directly since both bars
+                don’t share a common baseline. But the interactive legend helps
+                with this, allowing to single view per gender.
+                <br />
+                Some sports have fluctuating participation, making trends
+                difficult to interpret at a glance.
+                <br />
+                If bars are too close together, it may be difficult to
+                distinguish year-by-year trends.
+                <br />
+                The colour choices for gender should be distinct enough to
+                prevent confusion, especially in grayscale or
+                colorblind-friendly modes.
               </li>
             </ul>
-            <h3>Visualization 3</h3>
+            <h3>Density Plot & Bar Chart (Age Distribution of Medalists)</h3>
             <ul>
               <li>
-                <strong>Mark:</strong>
+                <strong>Mark:</strong> The mark type used is a Density plot to
+                represent the distribution of ages among medalists. A bar chart
+                is overlaid to show the total counts of medalists in different
+                age groups.
               </li>
               <li>
-                <strong>Channels:</strong>
+                <strong>Channels:</strong> Horizontal Position & Order (Density
+                Plot & Bar Chart): Represents the age of athletes.
+                <br />
+                Vertical Position (Density Plot): Represents the density of
+                medalists of different ages.
+                <br />
+                Vertical Position (Bar Chart): This represents the total count
+                of medalists in each age bin.
+                <br />
+                Colour Hue: Represents medal type (None, Gold, Silver, Bronze).
+                The None type represents athletes who didn't win anything.
               </li>
               <li>
-                <strong>Characteristics of Channels:</strong>
+                <strong>Characteristics of Channels:</strong> The Density plot
+                allows for visualizing distributions, making it easier to see
+                where the majority (most density) of medalists fall in terms of
+                age.
+                <br />
+                The bar chart provides a quick overview of age bins, giving an
+                easier way to compare total counts.
+                <br />
+                Colour hue ensures medal-type differentiation, allowing users to
+                analyze which age groups dominate gold, silver, bronze or
+                non-winners (None).
               </li>
               <li>
-                <strong>Interactivity:</strong>
+                <strong>Interactivity:</strong> The dropdown selection allows
+                users to filter by sport, helping focus on a specific sport at
+                once.
+                <br />
+                Hovering over the Density plot reveals tooltips with precise
+                information about age distributions and density. In the case of
+                the bar chart it gives precise age and count of records.
+                <br />
+                Clicking on a medal type in the legend filters the
+                visualization, dimming the other medals to highlight trends for
+                a single category. This allows users to view the trends for a
+                single medal type at once.
               </li>
               <li>
-                <strong>Critique:</strong>
+                <strong>Critique:</strong> The Density plot might be difficult
+                to interpret for users unfamiliar with density estimation and
+                just in general it is not easily interpretable at first glance.
+                <br />
+                Outliers (very young or old medalists) might distort the
+                visualization if not handled properly.
+                <br />
+                Stacking medal counts in the bar chart could make it harder to
+                compare total medal distributions between age groups. Luckily,
+                the interactive legend helps here.
               </li>
             </ul>
           </div>
